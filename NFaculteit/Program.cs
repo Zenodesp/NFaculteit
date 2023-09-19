@@ -12,6 +12,7 @@ char keuze = Convert.ToChar(Console.ReadLine());
 
 long nFaculteit = 1;
 
+int i = 1;
 
 switch (keuze)
 {
@@ -29,13 +30,21 @@ switch (keuze)
 
     case '2':
     // While-loop
-    int i = 1;
+    
     nFaculteit = 1;
     while (i <= getal)
     {
         nFaculteit *= i;
         i++;
     }
+        break;
+
+    case '3':
+        do
+        {
+            nFaculteit *= i;
+            i++;
+        } while (i <= getal);
         break;
 
 
