@@ -7,6 +7,8 @@ int getal = Convert.ToInt16(Console.ReadLine());
 Console.WriteLine("Met welke loop wilt u werken?");
 Console.WriteLine("1. For-loop");
 Console.WriteLine("2. While-loop");
+Console.WriteLine("3. Do-While loop");
+Console.WriteLine("4. Recursie");
 Console.Write("Geef uw keuze in:");
 char keuze = Convert.ToChar(Console.ReadLine());
 
@@ -47,6 +49,9 @@ switch (keuze)
         } while (i <= getal);
         break;
 
+    case '4':
+        nFaculteit = berekenFaculteit(getal);
+     break;
 
 
     default:
@@ -58,3 +63,12 @@ switch (keuze)
 
 
 Console.WriteLine(getal + "! = " + nFaculteit);
+
+int berekenFaculteit(int getal)
+{
+    if (getal == 1)
+    {
+        return 1;
+    }
+    return getal * berekenFaculteit(getal - 1);
+}
